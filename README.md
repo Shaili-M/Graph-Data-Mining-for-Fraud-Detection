@@ -16,18 +16,26 @@ Synthetic identity fraud and first party fraud can be identified by performing e
 to detect identities linked to other identities via shared PII. There are three types of __Personally
 Identifiable Information (PII)__ in the dataset - SSN, Email and Phone Number.<br> 
 
-__Steps for Finding First-Party Fraud:__
+![1](https://user-images.githubusercontent.com/71213312/178915480-80d8eab1-37ea-4674-be0b-bbab7e9b04ef.jpg)
+![2](https://user-images.githubusercontent.com/71213312/178915492-e03fd106-28a1-472d-bd96-0cc48fa96ff7.jpg)
+![3](https://user-images.githubusercontent.com/71213312/178915532-2b0913fa-8edb-438e-a3c4-aa3dcc67b6a0.jpg)
+![4](https://user-images.githubusercontent.com/71213312/178915545-10f6498e-9fc1-48ef-874c-ff287f79fdc7.jpg)
+
+__Steps for Finding First-Party Fraud:__![Uploading 3.jpg…]()
+
 1. Identify clients that share identifiers and create a new relationship between clients that share identifiers
 2. Identify clusters of clients sharing PII using a community detection algorithm (Weakly Connected Components)
 3. Find similar clients within the clusters using pairwise similarity algorithms (Node Similarity)
 4. Calculate and assign fraud score to clients using centrality algorithms (Degree Centrality)
 5. Use computed fraud scores to label clients as potential First-Party Fraudsters
+![5](https://user-images.githubusercontent.com/71213312/178915738-feafff8f-f385-4280-b1e4-a4d9da5c5570.jpg)
 
 __Steps for Finding Second-Party Fraud:__
 1. Use WCC (community detection) to identify networks of clients who are connected to first party fraudsters
 2. Use PageRank (centrality) to score clients based on their influence in terms of the amount of money transferred to/from fraudsters
 3. Assign risk score (secondPartyFraudScore) to these clients
 4. Find 2nd - Party Fraudsters using the risk score.
+![6](https://user-images.githubusercontent.com/71213312/178915674-45a8c8c0-3677-4942-b38d-36a518e49ec6.jpg)
 
 ## Neo4j 💹
 Neo4j is the world's leading open source Graph Database which is developed using Java technology. It is highly scalable and schema free (NoSQL). Notable features  Neo4j include some of the following mentioned ones −
